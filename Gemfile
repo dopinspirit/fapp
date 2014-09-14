@@ -39,6 +39,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'node'
+gem 'haml'
 
 group :production do
   gem 'pg', '0.15.1'
