@@ -40,6 +40,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'node'
 gem 'haml'
+gem 'bootstrap-sass'
+gem 'sprockets'
 
 group :production do
   gem 'pg', '0.15.1'

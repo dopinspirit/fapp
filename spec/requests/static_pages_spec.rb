@@ -2,15 +2,16 @@ require 'rails_helper'
 
 RSpec.describe "StaticPages", :type => :request do
 
-   describe "Home page" do
+  describe "Home page" do
+    before {visit root_path}
 
     it "should have some content" do
-      visit static_pages_home_path
-      expect(page).to have_content("Avoid")
+    #  visit static_pages_home_path
+      expect(page).to_not have_content("Avoid")
     end
 
     it "should have a right title" do
-      visit static_pages_home_path
+     # visit static_pages_home_path
       expect(page).to have_title("Home")
     end
 
@@ -19,12 +20,12 @@ RSpec.describe "StaticPages", :type => :request do
    describe "Help page" do
 
      it "should have some content" do
-       visit static_pages_help_path
+       visit help_path
        expect(page).to have_content("help")
      end
 
      it "should have a right title" do
-       visit static_pages_help_path
+       visit help_path
        expect(page).to have_title("Help")
      end
 
@@ -33,12 +34,12 @@ RSpec.describe "StaticPages", :type => :request do
    describe "About page" do
 
      it "should have some content" do
-       visit static_pages_about_path
+       visit about_path
        expect(page).to have_content("about")
      end
 
      it "should have a right title" do
-       visit static_pages_about_path
+       visit about_path
        expect(page).to have_title("About")
      end
 
