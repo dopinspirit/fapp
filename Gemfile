@@ -42,6 +42,7 @@ gem 'node'
 gem 'haml'
 gem 'bootstrap-sass'
 gem 'sprockets'
+gem 'bcrypt'
 
 group :production do
   gem 'pg', '0.15.1'

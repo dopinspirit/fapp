@@ -7,7 +7,7 @@ RSpec.describe "UserPages", :type => :request do
 
     before {visit signup_path}
 
-    it {expect(page).to have_content('Signup')}
+    it {expect(page).to have_selector("h1", text:'Signup')}
 
 
   end
