@@ -70,4 +70,19 @@ RSpec.describe User, :type => :model do
 
   end
 
+
+  describe "email address is downcase" do
+    let (:mixedcase) {"AfsfA@fmail.com"}
+    specify do
+      @user.email = mixedcase
+      @user.save
+      expect(@user.reload.email).to eq mixedcase.downcase
+
+    end
+
+
+
+
+  end
+
 end

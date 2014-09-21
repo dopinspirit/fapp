@@ -1,0 +1,19 @@
+%h1="Sign up"
+%div.row
+  %div.span6.offset3
+    =form_for(@user) do |f|
+      =render "shared/error_message"
+      =f.label :name
+      =f.text_field :name
+      %br
+      =f.label :email
+      =f.text_field :email
+      %br
+      =f.label :password
+      =f.password_field :password
+      %br
+      =f.label :password_confirmation, "Confirmation"
+      =f.password_field :password_confirmation
+      %br
+      =f.submit "Create", class: "btn btn-large btn-primary"
+    %end
